@@ -1,0 +1,131 @@
+{
+    "artists": [
+      {
+        "name": "DO WHAT YOU LOVE",
+        "bio": "Do What You Love Artist...",
+        "image": "artist_0.png",
+        "collection": [
+          {
+            "title": "Artwork 1.1",
+            "description": "Description of Artwork 1.1",
+            "image": "assets/artist1_artwork1.png"
+          },
+          {
+            "title": "Artwork 1.2",
+            "description": "Description of Artwork 1.2",
+            "image": "assets/artist1_artwork2.png"
+          },
+          {
+            "title": "Artwork 1.3",
+            "description": "Description of Artwork 1.3",
+            "image": "assets/artist1_artwork3.png"
+          }
+        ]
+      },
+      {
+        "name": "AMER.SM",
+        "bio": "Amer.SM...",
+        "image": "artist_1.png",
+        "collection": [
+          {
+            "title": "Artwork 2.1",
+            "description": "Description of Artwork 2.1",
+            "image": "assets/artist2_artwork1.png"
+          },
+          {
+            "title": "Artwork 2.2",
+            "description": "Description of Artwork 2.2",
+            "image": "assets/artist2_artwork2.png"
+          },
+          {
+            "title": "Artwork 2.3",
+            "description": "Description of Artwork 2.3",
+            "image": "assets/artist2_artwork3.png"
+          }
+        ]
+      },
+      {
+        "name": "INESSA",
+        "bio": "Iness Fine Art...",
+        "image": "artist_2.png",
+        "collection": [
+          {
+            "title": "Artwork 3.1",
+            "description": "Description of Artwork 3.1",
+            "image": "assets/artist3_artwork1.png"
+          },
+          {
+            "title": "Artwork 3.2",
+            "description": "Description of Artwork 3.2",
+            "image": "assets/artist3_artwork2.png"
+          },
+          {
+            "title": "Artwork 3.3",
+            "description": "Description of Artwork 3.3",
+            "image": "assets/artist3_artwork3.png"
+          }
+        ]
+      },
+      {
+        "name": "DO WHAT YOU LOVE",
+        "bio": "Bio...",
+        "image": "artist_3.png",
+        "collection": []
+      },
+      {
+        "name": "KYLE SCHINDLER",
+        "bio": "Bio...",
+        "image": "artist_4.png",
+        "collection": []
+      },
+      {
+        "name": "TRANSPARENT",
+        "bio": "Bio...",
+        "image": "artist_5.png",
+        "collection": []
+      },
+      {
+        "name": "JOSEPH SKALA",
+        "bio": "Bio...",
+        "image": "artist_6.png",
+        "collection": []
+      },
+      {
+        "name": "LEIDY MAZO",
+        "bio": "Bio...",
+        "image": "artist_7.png",
+        "collection": []
+      },
+      {
+        "name": "ALEJANDRO GLATT",
+        "bio": "Bio...",
+        "image": "artist_8.png",
+        "collection": []
+      },
+      {
+        "name": "CASH MONET",
+        "bio": "Bio...",
+        "image": "artist_9.png",
+        "collection": []
+      },
+      {
+        "name": "EDDY BOGAERT",
+        "bio": "Bio...",
+        "image": "artist_10.png",
+        "collection": []
+      },
+      {
+        "name": "JOHNNY DOLLAR",
+        "bio": "Bio...",
+        "image": "artist_11.png",
+        "collection": []
+      },
+      {
+        "name": "SAM P.",
+        "bio": "Bio...",
+        "image": "artist_12.png",
+        "collection": []
+      }
+    ]
+  }
+  
