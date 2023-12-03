@@ -41,4 +41,8 @@ flutter:
     - assets/artist_11.png
     - assets/artists_data.json
     - assets/background_image.jpg
+    - assets/facebook_icon.png
+    - assets/instagram_icon.png
+    - assets/x_icon.png
+    - assets/google_icon.png
     # Add paths to all artist images

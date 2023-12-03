@@ -1,6 +1,7 @@
 // lib/pages/artist_page.dart
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import '../widgets/footer_widget.dart';
 
 class ArtistPage extends StatelessWidget {
   final int artistIndex;
@@ -28,9 +29,6 @@ class ArtistPage extends StatelessWidget {
       'Artist 10',
       'Artist 11',
       'Artist 12',
-      'Artist 13',
-      'Artist 14',
-      'Artist 15',
     ];
 
     return Scaffold(
@@ -154,23 +152,13 @@ class ArtistPage extends StatelessWidget {
             SizedBox(height: 20),
             Center(
               child: Text(
-                'AVAILIABLE ARTWORKS',
+                'AVAILABLE ARTWORKS',
                 style: TextStyle(fontSize: 20, color: Colors.white),
               ),
             ),
-            Container(
-              padding: EdgeInsets.all(20),
-              color: Colors.black,
-              child: Center(
-                child: Text(
-                  '© Fine Art Society',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                  ),
-                ),
-              ),
-            ),
+            
+            // Use the FooterWidget here
+            FooterWidget(),
           ],
         ),
       ),

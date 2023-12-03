@@ -3,6 +3,7 @@ import '../widgets/custom_app_bar.dart';
 import '../widgets/featured_artists.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../widgets/footer_widget.dart';
 
 class MainPage extends StatelessWidget {
   final List<String> artistNames = [
@@ -113,6 +114,9 @@ class MainPage extends StatelessWidget {
 
                 // 3. Featured Artists
                 FeaturedArtists(artistNames: artistNames),
+
+                // 4, Use the FooterWidget here
+                FooterWidget(),
               ],
             ),
           );
