@@ -26,7 +26,7 @@ class MainPage extends StatelessWidget {
       appBar: CustomAppBar(),
       body: LayoutBuilder(
         builder: (context, constraints) {
-          double firstFoldHeight = MediaQuery.of(context).size.height * 0.5;
+          double firstFoldHeight = MediaQuery.of(context).size.height * 0.75;
 
           return SingleChildScrollView(
             child: Column(
