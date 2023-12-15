@@ -11,6 +11,10 @@ class ArtistPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final artistData =
         ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+
+    final artistArtWork = artistData['collection'];
+    print(artistArtWork);
+
     final List<String> pressImages = [
       'assets/press1.png',
       'assets/press2.png',
@@ -186,7 +190,41 @@ class ArtistPage extends StatelessWidget {
                 style: TextStyle(fontSize: 20, color: Colors.white),
               ),
             ),
-
+            SizedBox(
+              height: 20,
+            ),
+            // add available art works here
+            Wrap(
+              spacing: 20.0,
+              runSpacing: 20.0,
+              alignment: WrapAlignment.center,
+              children: List.generate(artistArtWork.length, (index) {
+                return InkWell(
+                  child: Container(
+                    width: 240,
+                    height: 240,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(artistArtWork[index]['image']),
+                        fit: BoxFit.cover,
+                      ),
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.grey,
+                    ),
+                    child: Center(
+                      child: Text(
+                        artistArtWork[index]['title'],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 20, color: Colors.white),
+                      ),
+                    ),
+                  ),
+                );
+              }),
+            ),
+            SizedBox(
+              height: 20,
+            ),
             // Use the FooterWidget here
             FooterWidget(),
           ],
