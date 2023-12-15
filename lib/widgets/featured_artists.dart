@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class FeaturedArtists extends StatelessWidget {
-  final List<String> artistNames;
+  final List<dynamic> artistData;
 
-  FeaturedArtists({required this.artistNames});
+  FeaturedArtists({required this.artistData});
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +23,10 @@ class FeaturedArtists extends StatelessWidget {
             spacing: 20.0,
             runSpacing: 20.0,
             alignment: WrapAlignment.center,
-            children: List.generate(artistNames.length, (index) {
+            children: List.generate(artistData.length, (index) {
               return InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, '/artist', arguments: index);
+                  Navigator.pushNamed(context, '/artist', arguments: artistData[index]);
                 },
                 child: Container(
                   width: 240,
@@ -41,7 +41,7 @@ class FeaturedArtists extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      artistNames[index],
+                      artistData[index]['name'],
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 20, color: Colors.white),
                     ),

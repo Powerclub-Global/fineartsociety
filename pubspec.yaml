@@ -23,26 +23,6 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/gallery.png
-    - assets/press1.png
-    - assets/press2.png
-    - assets/press3.png
-    - assets/artist_0.png
-    - assets/artist_1.png
-    - assets/artist_2.png
-    - assets/artist_3.png
-    - assets/artist_4.png
-    - assets/artist_5.png
-    - assets/artist_6.png
-    - assets/artist_7.png
-    - assets/artist_8.png
-    - assets/artist_9.png
-    - assets/artist_10.png
-    - assets/artist_11.png
-    - assets/artists_data.json
-    - assets/background_image.jpg
-    - assets/facebook_icon.png
-    - assets/instagram_icon.png
-    - assets/x_icon.png
-    - assets/google_icon.png
+  
+    - assets/
     # Add paths to all artist images

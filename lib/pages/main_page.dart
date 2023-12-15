@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../widgets/custom_app_bar.dart';
 import '../widgets/featured_artists.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -20,6 +23,13 @@ class MainPage extends StatelessWidget {
     'Artist 11',
     'Artist 12',
   ];
+
+  Future<List<dynamic>> readJson() async {
+    final String response =
+        await rootBundle.loadString('assets/artists_data.json');
+    final data = await json.decode(response);
+    return data['artists'];
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +63,8 @@ class MainPage extends StatelessWidget {
                           child: ElevatedButton(
                             onPressed: () {
                               _launchVirtualGallery() async {
-                                const url = 'https://app.tryspace.com/M6aiq2y/society-fine-art';
+                                const url =
+                                    'https://app.tryspace.com/M6aiq2y/society-fine-art';
                                 if (await canLaunch(url)) {
                                   await launch(url);
                                 } else {
@@ -102,9 +113,12 @@ class MainPage extends StatelessWidget {
                           return Image.asset(pressImagePath);
                         }).toList(),
                         options: CarouselOptions(
-                          height: constraints.maxWidth <= 600 ? firstFoldHeight * 0.2 : firstFoldHeight * 0.2,
+                          height: constraints.maxWidth <= 600
+                              ? firstFoldHeight * 0.2
+                              : firstFoldHeight * 0.2,
                           autoPlay: true,
-                          viewportFraction: constraints.maxWidth <= 600 ? 0.2 : 0.2,
+                          viewportFraction:
+                              constraints.maxWidth <= 600 ? 0.2 : 0.2,
                           enableInfiniteScroll: false,
                         ),
                       ),
@@ -113,7 +127,11 @@ class MainPage extends StatelessWidget {
                 ),
 
                 // 3. Featured Artists
-                FeaturedArtists(artistNames: artistNames),
+                FutureBuilder(
+                    future: readJson(),
+                    builder: (context, snapshot) {
+                      return FeaturedArtists(artistData: snapshot.data!);
+                    }),
 
                 // 4, Use the FooterWidget here
                 FooterWidget(),

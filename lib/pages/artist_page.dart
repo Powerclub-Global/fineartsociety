@@ -1,12 +1,16 @@
 // lib/pages/artist_page.dart
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/services.dart';
 import '../widgets/footer_widget.dart';
 
 class ArtistPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final artistIndex = ModalRoute.of(context)!.settings.arguments as int;
+    final artistData =
+        ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
     final List<String> pressImages = [
       'assets/press1.png',
       'assets/press2.png',
@@ -71,12 +75,15 @@ class ArtistPage extends StatelessWidget {
                       // Left side: Artist Image
                       Expanded(
                         flex: 2,
-                        child: Container(
-                          height: MediaQuery.of(context).size.height * 0.7,
-                          child: Image.asset(
-                            'assets/artist_$artistIndex.png',
-                            fit: BoxFit.cover,
-                            width: double.infinity,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Container(
+                            height: MediaQuery.of(context).size.height * 0.7,
+                            child: Image.asset(
+                              artistData['image'],
+                              fit: BoxFit.cover,
+                              width: double.infinity,
+                            ),
                           ),
                         ),
                       ),
@@ -91,7 +98,7 @@ class ArtistPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                artistNames[artistIndex],
+                                artistData['name'],
                                 style: TextStyle(
                                     fontSize: 24,
                                     color: Colors.white,
@@ -99,7 +106,7 @@ class ArtistPage extends StatelessWidget {
                               ),
                               SizedBox(height: 10),
                               Text(
-                                artistBio[artistIndex],
+                                artistData['bio'],
                                 style: TextStyle(
                                     fontSize: 16, color: Colors.white),
                               ),
@@ -114,12 +121,15 @@ class ArtistPage extends StatelessWidget {
                   return Column(
                     children: [
                       // Artist Image
-                      Container(
-                        height: MediaQuery.of(context).size.height * 0.7,
-                        child: Image.asset(
-                          'assets/artist_$artistIndex.png',
-                          fit: BoxFit.cover,
-                          width: double.infinity,
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(20),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height * 0.7,
+                          child: Image.asset(
+                            artistData['image'],
+                            fit: BoxFit.cover,
+                            width: double.infinity,
+                          ),
                         ),
                       ),
                       // Artist Name and Bio
@@ -131,7 +141,7 @@ class ArtistPage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              artistNames[artistIndex],
+                              artistData['name'],
                               style: TextStyle(
                                   fontSize: 24,
                                   color: Colors.white,
@@ -139,7 +149,7 @@ class ArtistPage extends StatelessWidget {
                             ),
                             SizedBox(height: 10),
                             Text(
-                              artistBio[artistIndex],
+                              artistData['bio'],
                               style:
                                   TextStyle(fontSize: 16, color: Colors.white),
                             ),
