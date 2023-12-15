@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => MainPage(),
-        '/artist': (context) => ArtistPage(artistIndex: 0),
+        '/artist': (context) => ArtistPage(),
         // Add more routes as needed
       },
     );

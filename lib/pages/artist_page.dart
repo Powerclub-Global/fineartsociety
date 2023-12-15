@@ -4,12 +4,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import '../widgets/footer_widget.dart';
 
 class ArtistPage extends StatelessWidget {
-  final int artistIndex;
-
-  ArtistPage({required this.artistIndex});
-
   @override
   Widget build(BuildContext context) {
+    final artistIndex = ModalRoute.of(context)!.settings.arguments as int;
     final List<String> pressImages = [
       'assets/press1.png',
       'assets/press2.png',
@@ -29,6 +26,21 @@ class ArtistPage extends StatelessWidget {
       'Artist 10',
       'Artist 11',
       'Artist 12',
+    ];
+
+    final List<String> artistBio = [
+      'Artist Bio 1',
+      'Artist Bio 2',
+      'Artist Bio 3',
+      'Artist Bio 4',
+      'Artist Bio 5',
+      'Artist Bio 6',
+      'Artist Bio 7',
+      'Artist Bio 8',
+      'Artist Bio 9',
+      'Artist Bio 10',
+      'Artist Bio 11',
+      'Artist Bio 12',
     ];
 
     return Scaffold(
@@ -80,12 +92,16 @@ class ArtistPage extends StatelessWidget {
                             children: [
                               Text(
                                 artistNames[artistIndex],
-                                style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                    fontSize: 24,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold),
                               ),
                               SizedBox(height: 10),
                               Text(
-                                'Artist Bio',
-                                style: TextStyle(fontSize: 16, color: Colors.white),
+                                artistBio[artistIndex],
+                                style: TextStyle(
+                                    fontSize: 16, color: Colors.white),
                               ),
                             ],
                           ),
@@ -116,12 +132,16 @@ class ArtistPage extends StatelessWidget {
                           children: [
                             Text(
                               artistNames[artistIndex],
-                              style: TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                  fontSize: 24,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
                             ),
                             SizedBox(height: 10),
                             Text(
-                              'Artist Bio',
-                              style: TextStyle(fontSize: 16, color: Colors.white),
+                              artistBio[artistIndex],
+                              style:
+                                  TextStyle(fontSize: 16, color: Colors.white),
                             ),
                           ],
                         ),
@@ -156,7 +176,7 @@ class ArtistPage extends StatelessWidget {
                 style: TextStyle(fontSize: 20, color: Colors.white),
               ),
             ),
-            
+
             // Use the FooterWidget here
             FooterWidget(),
           ],
