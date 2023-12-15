@@ -67,63 +67,57 @@
         ]
       },
       {
-        "name": "DO WHAT YOU LOVE",
+        "name": "KYLE SCHINDLER",
         "bio": "Bio...",
         "image": "artist_3.png",
         "collection": []
       },
       {
-        "name": "KYLE SCHINDLER",
+        "name": "TRANSPARENT",
         "bio": "Bio...",
         "image": "artist_4.png",
         "collection": []
       },
       {
-        "name": "TRANSPARENT",
+        "name": "JOSEPH SKALA",
         "bio": "Bio...",
         "image": "artist_5.png",
         "collection": []
       },
       {
-        "name": "JOSEPH SKALA",
+        "name": "LEIDY MAZO",
         "bio": "Bio...",
         "image": "artist_6.png",
         "collection": []
       },
       {
-        "name": "LEIDY MAZO",
+        "name": "ALEJANDRO GLATT",
         "bio": "Bio...",
         "image": "artist_7.png",
         "collection": []
       },
       {
-        "name": "ALEJANDRO GLATT",
+        "name": "CASH MONET",
         "bio": "Bio...",
         "image": "artist_8.png",
         "collection": []
       },
       {
-        "name": "CASH MONET",
+        "name": "EDDY BOGAERT",
         "bio": "Bio...",
         "image": "artist_9.png",
         "collection": []
       },
       {
-        "name": "EDDY BOGAERT",
+        "name": "JOHNNY DOLLAR",
         "bio": "Bio...",
         "image": "artist_10.png",
         "collection": []
       },
       {
-        "name": "JOHNNY DOLLAR",
-        "bio": "Bio...",
-        "image": "artist_11.png",
-        "collection": []
-      },
-      {
         "name": "SAM P.",
         "bio": "Bio...",
-        "image": "artist_12.png",
+        "image": "artist_11.png",
         "collection": []
       }
     ]
