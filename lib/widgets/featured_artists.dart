@@ -26,7 +26,7 @@ class FeaturedArtists extends StatelessWidget {
             children: List.generate(artistData.length, (index) {
               return InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, '/artist', arguments: artistData[index]);
+                  Navigator.pushNamed(context, '/artist', arguments: {"index": index, "data" :artistData[index]});
                 },
                 child: Container(
                   width: 240,
