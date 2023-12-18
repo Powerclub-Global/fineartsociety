@@ -30,10 +30,9 @@ class MainPage extends StatelessWidget {
     final data = await json.decode(response);
     return data['artists'];
   }
- 
+
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       appBar: CustomAppBar(),
       body: LayoutBuilder(
@@ -74,7 +73,7 @@ class MainPage extends StatelessWidget {
                               }
                             },
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.black,
+                              backgroundColor: Colors.black,
                             ),
                             child: Text(
                               'Enter Virtual Gallery',
