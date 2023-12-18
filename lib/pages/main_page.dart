@@ -30,7 +30,7 @@ class MainPage extends StatelessWidget {
     final data = await json.decode(response);
     return data['artists'];
   }
-
+ 
   @override
   Widget build(BuildContext context) {
     

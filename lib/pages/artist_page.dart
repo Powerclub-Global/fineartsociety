@@ -325,7 +325,7 @@ class _ArtistPageState extends State<ArtistPage> {
                 SizedBox(
                   height: 20,
                 ),
-                // add available art works here
+                // Art Works available implemented here
                 Wrap(
                   spacing: 20.0,
                   runSpacing: 20.0,
