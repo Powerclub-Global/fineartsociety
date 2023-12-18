@@ -216,7 +216,7 @@ class _ArtistPageState extends State<ArtistPage> {
                                 height:
                                     MediaQuery.of(context).size.height * 0.7,
                                 child: Image.asset(
-                                  artistData!['image'],
+                       'assets/artist_$artistIndex.png',
                                   fit: BoxFit.cover,
                                   width: double.infinity,
                                 ),
@@ -234,7 +234,7 @@ class _ArtistPageState extends State<ArtistPage> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    artistData['name'],
+                                    artistData!['name'],
                                     style: TextStyle(
                                         fontSize: 24,
                                         color: Colors.white,
@@ -262,7 +262,7 @@ class _ArtistPageState extends State<ArtistPage> {
                             child: Container(
                               height: MediaQuery.of(context).size.height * 0.7,
                               child: Image.asset(
-                                artistData!['image'],
+                              'assets/artist_$artistIndex.png',
                                 fit: BoxFit.cover,
                                 width: double.infinity,
                               ),
@@ -277,7 +277,7 @@ class _ArtistPageState extends State<ArtistPage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  artistData['name'],
+                                  artistData!['name'],
                                   style: TextStyle(
                                       fontSize: 24,
                                       color: Colors.white,
