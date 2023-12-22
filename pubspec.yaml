@@ -28,3 +28,7 @@ flutter:
   
     - assets/
     # Add paths to all artist images
+  fonts:
+    - family: Cinzel
+      fonts:
+        - asset: assets/fonts/Cinzel.ttf

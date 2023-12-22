@@ -11,8 +11,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: Text(
         'Fine Art Society',
         style: TextStyle(
+          letterSpacing: 2,
           fontSize: 20.0,
-          fontWeight: FontWeight.bold,
+          fontFamily: 'Cinzel',
+          // fontWeight: FontWeight.bold,
           color: Colors.white,
         ),
       ),
