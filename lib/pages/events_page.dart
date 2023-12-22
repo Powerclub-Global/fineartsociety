@@ -60,7 +60,7 @@ class EventsPage extends StatelessWidget {
                             'Request Access',
                             style: TextStyle(
                               fontSize: 25,
-                              color: Colors.amber,
+                              color: Color.fromARGB(255, 211, 161, 11),
                             ),
                           ),
                         ),
