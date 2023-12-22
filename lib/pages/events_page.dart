@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:timer_count_down/timer_count_down.dart';
 import '../widgets/custom_app_bar.dart';
 import '../widgets/blocks_grid.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -31,13 +32,121 @@ class EventsPage extends StatelessWidget {
                 // 1. Hero Image
                 Container(
                   height: firstFoldHeight,
-                  child: Center(
-                    child: Text(
-                      'NEXT EVENT',
-                      style: TextStyle(fontSize: 30),
-                    ),
+                  decoration: BoxDecoration(color: Colors.white),
+                  child: Stack(
+                    children: [
+                      Center(
+                        child: Text(
+                          'NEXT EVENT',
+                          style: TextStyle(fontSize: 50),
+                        ),
+                      ),
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Padding(
+                          padding: EdgeInsets.only(bottom: 20),
+                          child: Countdown(
+                            seconds: 259000,
+                            build: (BuildContext context, double time) {
+                              Duration Time = Duration(seconds: time.round());
+                              int Days = Time.inDays;
+                              int Hours = Time.inHours - Days * 24;
+                              int Minutes = Time.inMinutes - Time.inHours * 60;
+
+                              return Container(
+                                padding: EdgeInsets.symmetric(horizontal: 80),
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(100),
+                                  border: Border.all(
+                                      color: Colors.amber, width: 2.5),
+                                  color: Colors.black,
+                                ),
+                                height: 130,
+                                width: 500,
+                                child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            Days.toString().length == 1
+                                                ? '0${Days}'
+                                                : '${Days}',
+                                            style: TextStyle(
+                                                color: const Color.fromARGB(
+                                                    255, 209, 163, 23),
+                                                fontSize: 50),
+                                          ),
+                                          SizedBox(
+                                            height: 8,
+                                          ),
+                                          Text(
+                                            'DAYS',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            '${Hours}',
+                                            style: TextStyle(
+                                                color: const Color.fromARGB(
+                                                    255, 209, 163, 23),
+                                                fontSize: 50),
+                                          ),
+                                          SizedBox(
+                                            height: 8,
+                                          ),
+                                          Text(
+                                            'HOURS',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                            '${Minutes}',
+                                            style: TextStyle(
+                                                color: const Color.fromARGB(
+                                                    255, 209, 163, 23),
+                                                fontSize: 50),
+                                          ),
+                                          SizedBox(
+                                            height: 8,
+                                          ),
+                                          Text(
+                                            'MINUTES',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ]),
+                              );
+                            },
+                            interval: Duration(minutes: 1),
+                            onFinished: () {
+                              print('Timer is done!');
+                            },
+                          ),
+                        ),
+                      )
+                    ],
                   ),
-                  decoration: BoxDecoration(color: Colors.grey),
                 ),
                 SizedBox(
                   height: 40,
