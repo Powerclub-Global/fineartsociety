@@ -3,7 +3,14 @@ import 'package:flutter/material.dart';
 
 class FooterWidget extends StatelessWidget {
   // Define the menu items
-  final List<String> menuItems = ['Gallery', 'Artists', 'Events', 'Exhibitions', 'News', 'Contact'];
+  Map<String, String> menuItems = {
+    'Home': '',
+    'Artist': 'allArtist',
+    'Events': 'events',
+    'Exhibitions': '',
+    'News': 'news',
+    'Contact': ''
+  };
 
   @override
   Widget build(BuildContext context) {
@@ -15,23 +22,29 @@ class FooterWidget extends StatelessWidget {
       color: Colors.black,
       child: Column(
         children: [
+          SizedBox(height: 40),
+          Divider(
+            color: Colors.amber,
+            thickness: 1,
+          ),
+          SizedBox(height: 10),
           // Navigation Bar
           isDesktop
               ? // Desktop layout
               Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: menuItems.map((item) {
+                  children: menuItems.keys.map((item) {
                     return TextButton(
                       onPressed: () {
                         // Navigate to the corresponding page for each menu item
                         // You can replace the '/' with the actual route for each menu item
-                        Navigator.pushNamed(context, '/');
+                        Navigator.pushNamed(context, '/${menuItems[item]}');
                       },
                       child: Text(
                         item,
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 14,
+                          fontSize: 16,
                         ),
                       ),
                     );
@@ -39,12 +52,12 @@ class FooterWidget extends StatelessWidget {
                 )
               : // Mobile layout
               Column(
-                  children: menuItems.map((item) {
+                  children: menuItems.keys.map((item) {
                     return TextButton(
                       onPressed: () {
                         // Navigate to the corresponding page for each menu item
                         // You can replace the '/' with the actual route for each menu item
-                        Navigator.pushNamed(context, '/');
+                        Navigator.pushNamed(context, '/${menuItems[item]}');
                       },
                       child: Text(
                         item,
@@ -56,7 +69,7 @@ class FooterWidget extends StatelessWidget {
                     );
                   }).toList(),
                 ),
-          
+
           SizedBox(height: 20),
           // Social Media Icons
           Row(

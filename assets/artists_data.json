@@ -4,6 +4,7 @@
         "name": "DO WHAT YOU LOVE",
         "bio": "Do What You Love Artist...",
         "image": "artist_0.png",
+        "featured": true,
         "collection": [
           {
             "title": "Artwork 1.1",
@@ -25,6 +26,7 @@
       {
         "name": "AMER.SM",
         "bio": "Amer.SM...",
+        "featured": true,
         "image": "artist_1.png",
         "collection": [
           {
@@ -47,6 +49,7 @@
       {
         "name": "INESSA",
         "bio": "Iness Fine Art...",
+        "featured": false,
         "image": "artist_2.png",
         "collection": [
           {
@@ -69,47 +72,55 @@
       {
         "name": "KYLE SCHINDLER",
         "bio": "Bio...",
+        "featured": false,
         "image": "artist_3.png",
         "collection": []
       },
       {
         "name": "TRANSPARENT",
         "bio": "Bio...",
+        "featured": true,
         "image": "artist_4.png",
         "collection": []
       },
       {
         "name": "JOSEPH SKALA",
         "bio": "Bio...",
+        "featured": true,
         "image": "artist_5.png",
         "collection": []
       },
       {
         "name": "LEIDY MAZO",
         "bio": "Bio...",
+        "featured": false,
         "image": "artist_6.png",
         "collection": []
       },
       {
         "name": "ALEJANDRO GLATT",
         "bio": "Bio...",
+        "featured": false,
         "image": "artist_7.png",
         "collection": []
       },
       {
         "name": "CASH MONET",
         "bio": "Bio...",
+        "featured": false,
         "image": "artist_8.png",
         "collection": []
       },
       {
         "name": "EDDY BOGAERT",
         "bio": "Bio...",
+        "featured": false,
         "image": "artist_9.png",
         "collection": []
       },
       {
         "name": "JOHNNY DOLLAR",
+        "featured": false,
         "bio": "Bio...",
         "image": "artist_10.png",
         "collection": []
@@ -117,9 +128,134 @@
       {
         "name": "SAM P.",
         "bio": "Bio...",
+        "featured": false,
         "image": "artist_11.png",
         "collection": []
       }
-    ]
+    ],
+    "news": [
+        {
+          "name": "DO WHAT YOU LOVE",
+          "desc": "Do What You Love Artist...",
+          "image": "artist_0.png"
+        },
+        {
+          "name": "AMER.SM",
+          "desc": "Amer.SM...",
+          "image": "artist_1.png"
+        },
+        {
+          "name": "INESSA",
+          "desc": "Iness Fine Art...",
+          "image": "artist_2.png"
+        },
+        {
+          "name": "KYLE SCHINDLER",
+          "desc": "desc...",
+          "image": "artist_3.png"
+        },
+        {
+          "name": "TRANSPARENT",
+          "desc": "desc...",
+          "image": "artist_4.png"
+        },
+        {
+          "name": "JOSEPH SKALA",
+          "desc": "desc...",
+          "image": "artist_5.png"
+        },
+        {
+          "name": "LEIDY MAZO",
+          "desc": "desc...",
+          "image": "artist_6.png"
+        },
+        {
+          "name": "ALEJANDRO GLATT",
+          "desc": "desc...",
+          "image": "artist_7.png"
+        },
+        {
+          "name": "CASH MONET",
+          "desc": "desc...",
+          "image": "artist_8.png"
+        },
+        {
+          "name": "EDDY BOGAERT",
+          "desc": "desc...",
+          "image": "artist_9.png"
+        },
+        {
+          "name": "JOHNNY DOLLAR",
+          "desc": "desc...",
+          "image": "artist_10.png"
+        },
+        {
+          "name": "SAM P.",
+          "desc": "desc...",
+          "image": "artist_11.png"
+        }
+      ],
+      "events": [
+        {
+          "name": "DO WHAT YOU LOVE",
+          "desc": "Do What You Love Artist...",
+          "image": "artist_0.png"
+        },
+        {
+          "name": "AMER.SM",
+          "desc": "Amer.SM...",
+          "image": "artist_1.png"
+        },
+        {
+          "name": "INESSA",
+          "desc": "Iness Fine Art...",
+          "image": "artist_2.png"
+        },
+        {
+          "name": "KYLE SCHINDLER",
+          "desc": "desc...",
+          "image": "artist_3.png"
+        },
+        {
+          "name": "TRANSPARENT",
+          "desc": "desc...",
+          "image": "artist_4.png"
+        },
+        {
+          "name": "JOSEPH SKALA",
+          "desc": "desc...",
+          "image": "artist_5.png"
+        },
+        {
+          "name": "LEIDY MAZO",
+          "desc": "desc...",
+          "image": "artist_6.png"
+        },
+        {
+          "name": "ALEJANDRO GLATT",
+          "desc": "desc...",
+          "image": "artist_7.png"
+        },
+        {
+          "name": "CASH MONET",
+          "desc": "desc...",
+          "image": "artist_8.png"
+        },
+        {
+          "name": "EDDY BOGAERT",
+          "desc": "desc...",
+          "image": "artist_9.png"
+        },
+        {
+          "name": "JOHNNY DOLLAR",
+          "desc": "desc...",
+          "image": "artist_10.png"
+        },
+        {
+          "name": "SAM P.",
+          "desc": "desc...",
+          "image": "artist_11.png"
+        }
+      ]
   }
   

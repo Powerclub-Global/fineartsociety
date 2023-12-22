@@ -1,4 +1,6 @@
-// lib/main.dart
+import 'package:fineartsociety/pages/all_artist_page.dart';
+import 'package:fineartsociety/pages/events_page.dart';
+import 'package:fineartsociety/pages/news_page.dart';
 import 'package:flutter/material.dart';
 import 'pages/main_page.dart';
 import 'pages/artist_page.dart';
@@ -19,6 +21,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => MainPage(),
         '/artist': (context) => ArtistPage(),
+        '/news': (context) => NewsPage(),
+        '/allArtist': (context) => AllArtistsPage(),
+        '/events': (context) => EventsPage(),
         // Add more routes as needed
       },
     );
