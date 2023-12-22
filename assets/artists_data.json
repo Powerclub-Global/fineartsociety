@@ -107,7 +107,7 @@
       {
         "name": "CASH MONET",
         "bio": "Bio...",
-        "featured": false,
+        "featured": true,
         "image": "artist_8.png",
         "collection": []
       },
@@ -120,7 +120,7 @@
       },
       {
         "name": "JOHNNY DOLLAR",
-        "featured": false,
+        "featured": true,
         "bio": "Bio...",
         "image": "artist_10.png",
         "collection": []
