@@ -31,15 +31,9 @@ class EventsPage extends StatelessWidget {
                 // 1. Hero Image
                 Container(
                   height: firstFoldHeight,
-                  color: Colors.black,
+                  color: Colors.grey,
                   child: Stack(
                     children: [
-                      Image.asset(
-                        'assets/background_image.jpg',
-                        fit: BoxFit.cover,
-                        width: double.infinity,
-                        height: double.infinity,
-                      ),
                       Positioned(
                         bottom: 20,
                         left: 0,
@@ -48,12 +42,21 @@ class EventsPage extends StatelessWidget {
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.black,
-                            ),
-                            child: Text(
-                              'Request Access',
-                              style: TextStyle(
-                                color: Colors.white,
+                                backgroundColor: Colors.black,
+                                elevation: 20,
+                                side: BorderSide(
+                                    color: Colors.amber,
+                                    width: 2,
+                                    strokeAlign:
+                                        BorderSide.strokeAlignOutside)),
+                            child: Padding(
+                              padding: EdgeInsets.all(15),
+                              child: Text(
+                                'Request Access',
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: Colors.white,
+                                ),
                               ),
                             ),
                           ),
@@ -120,7 +123,10 @@ class EventsPage extends StatelessWidget {
                 FutureBuilder(
                     future: readJson(),
                     builder: (context, snapshot) {
-                      return BuildBlockGrid(girdData: snapshot.data!, isRectangular: true,);
+                      return BuildBlockGrid(
+                        girdData: snapshot.data!,
+                        isRectangular: true,
+                      );
                     }),
 
                 // 4, Use the FooterWidget here
