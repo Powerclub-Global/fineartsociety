@@ -23,7 +23,7 @@ class EventsPage extends StatelessWidget {
       appBar: CustomAppBar(),
       body: LayoutBuilder(
         builder: (context, constraints) {
-          double firstFoldHeight = MediaQuery.of(context).size.height * 0.6;
+          double firstFoldHeight = MediaQuery.of(context).size.height * 0.75;
 
           return SingleChildScrollView(
             child: Column(
@@ -158,15 +158,14 @@ class EventsPage extends StatelessWidget {
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.black,
-                            elevation: 20,
                             side: BorderSide(
                                 color: Colors.amber,
-                                width: 2,
+                                width: 1,
                                 strokeAlign: BorderSide.strokeAlignOutside)),
                         child: Padding(
-                          padding: EdgeInsets.all(15),
+                          padding: EdgeInsets.all(20),
                           child: Text(
-                            'Request Access',
+                            ' REQUEST ACCESS ',
                             style: TextStyle(
                               fontSize: 25,
                               color: Color.fromARGB(255, 211, 161, 11),
