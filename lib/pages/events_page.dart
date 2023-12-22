@@ -22,7 +22,7 @@ class EventsPage extends StatelessWidget {
       appBar: CustomAppBar(),
       body: LayoutBuilder(
         builder: (context, constraints) {
-          double firstFoldHeight = MediaQuery.of(context).size.height * 0.75;
+          double firstFoldHeight = MediaQuery.of(context).size.height * 0.6;
 
           return SingleChildScrollView(
             child: Column(
@@ -31,37 +31,81 @@ class EventsPage extends StatelessWidget {
                 // 1. Hero Image
                 Container(
                   height: firstFoldHeight,
-                  color: Colors.black,
-                  child: Stack(
-                    children: [
-                      Image.asset(
-                        'assets/background_image.jpg',
-                        fit: BoxFit.cover,
-                        width: double.infinity,
-                        height: double.infinity,
-                      ),
-                      Positioned(
-                        bottom: 20,
-                        left: 0,
-                        right: 0,
-                        child: Center(
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.black,
-                            ),
-                            child: Text(
-                              'Request Access',
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
+                  child: Center(
+                    child: Text(
+                      'NEXT EVENT',
+                      style: TextStyle(fontSize: 30),
+                    ),
+                  ),
+                  decoration: BoxDecoration(color: Colors.grey),
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                Stack(
+                  children: [
+                    Center(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.black,
+                            elevation: 20,
+                            side: BorderSide(
+                                color: Colors.amber,
+                                width: 2,
+                                strokeAlign: BorderSide.strokeAlignOutside)),
+                        child: Padding(
+                          padding: EdgeInsets.all(15),
+                          child: Text(
+                            'Request Access',
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.amber,
                             ),
                           ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
+                // Container(
+                //   height: firstFoldHeight,
+                //   color: Colors.black,
+                //   child: Column(
+                //     children: [
+                //    ,
+
+                // Positioned(
+                //   bottom: 20,
+                //   left: 0,
+                //   right: 0,
+                //   child: Center(
+                //     child: ElevatedButton(
+                //       onPressed: () {},
+                //       style: ElevatedButton.styleFrom(
+                //           backgroundColor: Colors.black,
+                //           elevation: 20,
+                //           side: BorderSide(
+                //               color: Colors.amber,
+                //               width: 2,
+                //               strokeAlign:
+                //                   BorderSide.strokeAlignOutside)),
+                //       child: Padding(
+                //         padding: EdgeInsets.all(15),
+                //         child: Text(
+                //           'Request Access',
+                //           style: TextStyle(
+                //             fontSize: 25,
+                //             color: Colors.amber,
+                //           ),
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
+                //     ],
+                //   ),
+                // ),
 
                 // 2. Press Carousel
                 // SizedBox(height: 20),
@@ -107,7 +151,9 @@ class EventsPage extends StatelessWidget {
                 //     ],
                 //   ),
                 // ),
-                SizedBox(height: 20),
+                SizedBox(
+                  height: 40,
+                ),
                 Center(
                   child: Text(
                     'PAST EXPERIENCE',
@@ -120,7 +166,10 @@ class EventsPage extends StatelessWidget {
                 FutureBuilder(
                     future: readJson(),
                     builder: (context, snapshot) {
-                      return BuildBlockGrid(girdData: snapshot.data!, isRectangular: true,);
+                      return BuildBlockGrid(
+                        girdData: snapshot.data!,
+                        isRectangular: true,
+                      );
                     }),
 
                 // 4, Use the FooterWidget here
