@@ -12,7 +12,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         preferredSize: const Size.fromHeight(4.0),
         child: Container(
           decoration: BoxDecoration(
-              color: Colors.amber, borderRadius: BorderRadius.circular(20)),
+            color: Colors.amber,
+          ),
           height: 1,
         ),
       ),
@@ -26,6 +27,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           color: Colors.white,
         ),
       ),
+      automaticallyImplyLeading: false,
       backgroundColor: Colors.black,
       centerTitle: true,
     );

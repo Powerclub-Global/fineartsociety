@@ -7,7 +7,7 @@ class FooterWidget extends StatelessWidget {
     'Home': '',
     'Artist': 'allArtist',
     'Events': 'events',
-    'Exhibitions': '',
+    'Exhibitions': 'exhibitions',
     'News': 'news',
     'Contact': 'contact'
   };

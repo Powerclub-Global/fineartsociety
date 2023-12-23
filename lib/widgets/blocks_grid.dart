@@ -19,8 +19,10 @@ class BuildBlockGrid extends StatelessWidget {
             children: List.generate(girdData.length, (index) {
               return InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, '/artist',
-                      arguments: {"index": index, "data": girdData[index]});
+                  !isRectangular
+                      ? Navigator.pushNamed(context, '/artist',
+                          arguments: {"index": index, "data": girdData[index]})
+                      : null;
                 },
                 child: Container(
                   width: isRectangular ? 320 : 240,
