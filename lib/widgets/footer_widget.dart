@@ -9,7 +9,7 @@ class FooterWidget extends StatelessWidget {
     'Events': 'events',
     'Exhibitions': '',
     'News': 'news',
-    'Contact': ''
+    'Contact': 'contact'
   };
 
   @override

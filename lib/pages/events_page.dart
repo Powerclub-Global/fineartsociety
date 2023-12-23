@@ -32,7 +32,7 @@ class EventsPage extends StatelessWidget {
                 // 1. Hero Image
                 Container(
                   height: firstFoldHeight,
-                  decoration: BoxDecoration(color: Colors.white),
+                  decoration: BoxDecoration(color: Colors.grey),
                   child: Stack(
                     children: [
                       Center(

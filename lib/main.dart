@@ -1,4 +1,5 @@
 import 'package:fineartsociety/pages/all_artist_page.dart';
+import 'package:fineartsociety/pages/contact_%20page.dart';
 import 'package:fineartsociety/pages/events_page.dart';
 import 'package:fineartsociety/pages/news_page.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/news': (context) => NewsPage(),
         '/allArtist': (context) => AllArtistsPage(),
         '/events': (context) => EventsPage(),
+        '/contact': (context) => ContactPage()
         // Add more routes as needed
       },
     );
