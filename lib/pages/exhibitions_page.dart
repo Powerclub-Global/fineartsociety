@@ -41,8 +41,11 @@ class ExhibitionPage extends StatelessWidget {
                   color: Colors.black,
                   child: Stack(
                     children: [
-                      SvgPicture.asset('assets/Construction-cuate.svg',
-                          semanticsLabel: 'Web Page Under Construction'),
+                      Align(
+                        alignment: Alignment.center,
+                        child: SvgPicture.asset('assets/Construction-cuate.svg',
+                            semanticsLabel: 'Web Page Under Construction'),
+                      ),
                       // Positioned(
                       //   bottom: 20,
                       //   left: 0,
