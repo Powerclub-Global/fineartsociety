@@ -29,29 +29,35 @@ class ExhibitionPage extends StatelessWidget {
       body: LayoutBuilder(
         builder: (context, constraints) {
           double firstFoldHeight = MediaQuery.of(context).size.height * 0.9;
+          bool isDesktop = MediaQuery.of(context).size.width > 607;
 
           return SingleChildScrollView(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 // 1. Hero Image
-                Container(
-                  height: firstFoldHeight,
-                  color: Colors.black,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: 40,
-                      ),
-                      Text(
-                        "FAIR AND EXHIBITIONS",
-                        style: TextStyle(color: Colors.white, fontSize: 30),
-                      ),
-                      SizedBox(
-                        height: 30,
-                      ),
-                      Row(
+                // Container(
+                //   height: firstFoldHeight,
+                //   color: Colors.black,
+                //   child: Column(
+                //     crossAxisAlignment: CrossAxisAlignment.center,
+                //     children: [
+                //       S
+                //     ],
+                //   ),
+                // ),
+                SizedBox(
+                  height: 0.0490797546 * MediaQuery.sizeOf(context).height,
+                ),
+                Text(
+                  "FAIR AND EXHIBITIONS",
+                  style: TextStyle(color: Colors.white, fontSize: 30),
+                ),
+                SizedBox(
+                  height: 0.03680981595 * MediaQuery.sizeOf(context).height,
+                ),
+                isDesktop
+                    ? Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           TextButton(
@@ -62,7 +68,8 @@ class ExhibitionPage extends StatelessWidget {
                                     color: Colors.white, fontSize: 25),
                               )),
                           SizedBox(
-                            width: 40,
+                            width: 0.0490797546 *
+                                MediaQuery.sizeOf(context).height,
                           ),
                           TextButton(
                               onPressed: () {},
@@ -72,7 +79,8 @@ class ExhibitionPage extends StatelessWidget {
                                     color: Colors.white, fontSize: 25),
                               )),
                           SizedBox(
-                            width: 40,
+                            width: 0.0490797546 *
+                                MediaQuery.sizeOf(context).height,
                           ),
                           TextButton(
                               onPressed: () {},
@@ -82,7 +90,8 @@ class ExhibitionPage extends StatelessWidget {
                                     color: Colors.white, fontSize: 25),
                               )),
                           SizedBox(
-                            width: 40,
+                            width: 0.0490797546 *
+                                MediaQuery.sizeOf(context).height,
                           ),
                           TextButton(
                               onPressed: () {},
@@ -92,7 +101,60 @@ class ExhibitionPage extends StatelessWidget {
                                     color: Colors.white, fontSize: 25),
                               )),
                           SizedBox(
-                            width: 40,
+                            width: 0.0490797546 *
+                                MediaQuery.sizeOf(context).height,
+                          ),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "2023",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 25),
+                              )),
+                        ],
+                      )
+                    : Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "2019",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 25),
+                              )),
+                          SizedBox(
+                            height: 30,
+                          ),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "2020",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 25),
+                              )),
+                          SizedBox(
+                            height: 30,
+                          ),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "2021",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 25),
+                              )),
+                          SizedBox(
+                            height: 30,
+                          ),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "2022",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 25),
+                              )),
+                          SizedBox(
+                            height: 30,
                           ),
                           TextButton(
                               onPressed: () {},
@@ -103,57 +165,54 @@ class ExhibitionPage extends StatelessWidget {
                               )),
                         ],
                       ),
-                      // Positioned(
-                      //   bottom: 20,
-                      //   left: 0,
-                      //   right: 0,
-                      //   child: Center(
-                      //     child: ElevatedButton(
-                      //       onPressed: () {
-                      //         launchUrl(Uri.parse(
-                      //             'https://app.tryspace.com/M6aiq2y/society-fine-art'));
-                      //       },
-                      //       style: ElevatedButton.styleFrom(
-                      //         backgroundColor: Colors.black,
-                      //       ),
-                      //       child: Text(
-                      //         'Enter Virtual Gallery',
-                      //         style: TextStyle(
-                      //           color: Colors.white,
-                      //         ),
-                      //       ),
-                      //     ),
-                      //   ),
-                      // ),
-                      SizedBox(
-                        height: 60,
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: Colors.grey,
-                            borderRadius: BorderRadius.circular(30)),
-                        height: 400,
-                        width: 500,
-                      ),
-                      SizedBox(
-                        height: 30,
-                      ),
-                      Text(
-                        "Red Dot and Spectrum",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        "December X - December X 2022",
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      )
-                    ],
+                // Positioned(
+                //   bottom: 20,
+                //   left: 0,
+                //   right: 0,
+                //   child: Center(
+                //     child: ElevatedButton(
+                //       onPressed: () {
+                //         launchUrl(Uri.parse(
+                //             'https://app.tryspace.com/M6aiq2y/society-fine-art'));
+                //       },
+                //       style: ElevatedButton.styleFrom(
+                //         backgroundColor: Colors.black,
+                //       ),
+                //       child: Text(
+                //         'Enter Virtual Gallery',
+                //         style: TextStyle(
+                //           color: Colors.white,
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
+                SizedBox(
+                  height: 0.0736196319 * MediaQuery.sizeOf(context).height,
+                ),
+                Padding(
+                  padding: EdgeInsets.all(20),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.grey,
+                        borderRadius: BorderRadius.circular(30)),
+                    height: 380,
+                    width: 480,
                   ),
                 ),
+                Text(
+                  "Red Dot and Spectrum",
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
                 SizedBox(
-                  height: 40,
+                  height: 5,
+                ),
+                Text(
+                  "December X - December X 2022",
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+                SizedBox(
+                  height: 100,
                 ),
                 Align(
                   alignment: Alignment.center,
@@ -165,61 +224,127 @@ class ExhibitionPage extends StatelessWidget {
                 SizedBox(
                   height: 40,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Column(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                              color: Colors.grey,
-                              borderRadius: BorderRadius.circular(30)),
-                          height: 340,
-                          width: 440,
-                        ),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        Text(
-                          "Red Dot and Spectrum",
-                          style: TextStyle(color: Colors.white, fontSize: 20),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          "December X - December X 2022",
-                          style: TextStyle(color: Colors.white, fontSize: 20),
-                        )
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                              color: Colors.grey,
-                              borderRadius: BorderRadius.circular(30)),
-                          height: 340,
-                          width: 440,
-                        ),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        Text(
-                          "Red Dot and Spectrum",
-                          style: TextStyle(color: Colors.white, fontSize: 20),
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          "December X - December X 2022",
-                          style: TextStyle(color: Colors.white, fontSize: 20),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
+                isDesktop
+                    ? Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.grey,
+                                    borderRadius: BorderRadius.circular(30)),
+                                height: 340,
+                                width: 440,
+                              ),
+                              SizedBox(
+                                height: 30,
+                              ),
+                              Text(
+                                "Red Dot and Spectrum",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                "December X - December X 2022",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              )
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.grey,
+                                    borderRadius: BorderRadius.circular(30)),
+                                height: 340,
+                                width: 440,
+                              ),
+                              SizedBox(
+                                height: 30,
+                              ),
+                              Text(
+                                "Red Dot and Spectrum",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                "December X - December X 2022",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              )
+                            ],
+                          ),
+                        ],
+                      )
+                    : Column(
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.grey,
+                                    borderRadius: BorderRadius.circular(30)),
+                                height: 340,
+                                width: 440,
+                              ),
+                              SizedBox(
+                                height: 30,
+                              ),
+                              Text(
+                                "Red Dot and Spectrum",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                "December X - December X 2022",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              )
+                            ],
+                          ),
+                          SizedBox(
+                            height: 80,
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Colors.grey,
+                                    borderRadius: BorderRadius.circular(30)),
+                                height: 340,
+                                width: 440,
+                              ),
+                              SizedBox(
+                                height: 30,
+                              ),
+                              Text(
+                                "Red Dot and Spectrum",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Text(
+                                "December X - December X 2022",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
                 // // 2. Press Carousel
                 // Container(
                 //   color: Colors.black,
