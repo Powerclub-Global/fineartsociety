@@ -196,7 +196,7 @@ class ExhibitionPage extends StatelessWidget {
                               color: Colors.grey,
                               borderRadius: BorderRadius.circular(30)),
                           height: 380,
-                          width: 480,
+                          width: 540,
                         ),
                       ),
                       Text(
@@ -238,7 +238,7 @@ class ExhibitionPage extends StatelessWidget {
                                     color: Colors.grey,
                                     borderRadius: BorderRadius.circular(30)),
                                 height: 340,
-                                width: 440,
+                                width: 500,
                               ),
                               SizedBox(
                                 height: 30,
@@ -265,7 +265,7 @@ class ExhibitionPage extends StatelessWidget {
                                     color: Colors.grey,
                                     borderRadius: BorderRadius.circular(30)),
                                 height: 340,
-                                width: 440,
+                                width: 500,
                               ),
                               SizedBox(
                                 height: 30,
@@ -296,7 +296,7 @@ class ExhibitionPage extends StatelessWidget {
                                     color: Colors.grey,
                                     borderRadius: BorderRadius.circular(30)),
                                 height: 340,
-                                width: 440,
+                                width: 500,
                               ),
                               SizedBox(
                                 height: 30,
@@ -326,7 +326,7 @@ class ExhibitionPage extends StatelessWidget {
                                     color: Colors.grey,
                                     borderRadius: BorderRadius.circular(30)),
                                 height: 340,
-                                width: 440,
+                                width: 500,
                               ),
                               SizedBox(
                                 height: 30,
