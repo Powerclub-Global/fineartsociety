@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
@@ -29,7 +28,7 @@ class ExhibitionPage extends StatelessWidget {
       appBar: CustomAppBar(),
       body: LayoutBuilder(
         builder: (context, constraints) {
-          double firstFoldHeight = MediaQuery.of(context).size.height * 0.75;
+          double firstFoldHeight = MediaQuery.of(context).size.height * 0.9;
 
           return SingleChildScrollView(
             child: Column(
@@ -39,12 +38,70 @@ class ExhibitionPage extends StatelessWidget {
                 Container(
                   height: firstFoldHeight,
                   color: Colors.black,
-                  child: Stack(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Align(
-                        alignment: Alignment.center,
-                        child: SvgPicture.asset('assets/Construction-cuate.svg',
-                            semanticsLabel: 'Web Page Under Construction'),
+                      SizedBox(
+                        height: 40,
+                      ),
+                      Text(
+                        "FAIR AND EXHIBITIONS",
+                        style: TextStyle(color: Colors.white, fontSize: 30),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "2019",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 25),
+                              )),
+                          SizedBox(
+                            width: 40,
+                          ),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "2020",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 25),
+                              )),
+                          SizedBox(
+                            width: 40,
+                          ),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "2021",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 25),
+                              )),
+                          SizedBox(
+                            width: 40,
+                          ),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "2022",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 25),
+                              )),
+                          SizedBox(
+                            width: 40,
+                          ),
+                          TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                "2023",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 25),
+                              )),
+                        ],
                       ),
                       // Positioned(
                       //   bottom: 20,
@@ -68,10 +125,101 @@ class ExhibitionPage extends StatelessWidget {
                       //     ),
                       //   ),
                       // ),
+                      SizedBox(
+                        height: 60,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Colors.grey,
+                            borderRadius: BorderRadius.circular(30)),
+                        height: 400,
+                        width: 500,
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Text(
+                        "Red Dot and Spectrum",
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        "December X - December X 2022",
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      )
                     ],
                   ),
                 ),
-
+                SizedBox(
+                  height: 40,
+                ),
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "2023",
+                    style: TextStyle(color: Colors.white, fontSize: 30),
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                              color: Colors.grey,
+                              borderRadius: BorderRadius.circular(30)),
+                          height: 340,
+                          width: 440,
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Text(
+                          "Red Dot and Spectrum",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          "December X - December X 2022",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        )
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                              color: Colors.grey,
+                              borderRadius: BorderRadius.circular(30)),
+                          height: 340,
+                          width: 440,
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Text(
+                          "Red Dot and Spectrum",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          "December X - December X 2022",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
                 // // 2. Press Carousel
                 // Container(
                 //   color: Colors.black,
@@ -109,14 +257,6 @@ class ExhibitionPage extends StatelessWidget {
                 //     ],
                 //   ),
                 // ),
-                SizedBox(height: 20),
-                Center(
-                  child: Text(
-                    'UNDER CONSTRUCTION',
-                    style: TextStyle(fontSize: 20, color: Colors.white),
-                  ),
-                ),
-                SizedBox(height: 20),
                 // 3. Featured Artists
                 // FutureBuilder(
                 //     future: readJson(),
