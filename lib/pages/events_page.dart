@@ -277,9 +277,12 @@ class EventsPage extends StatelessWidget {
                       return BuildBlockGrid(
                         girdData: snapshot.data!,
                         isRectangular: true,
+                        isEvent: true,
                       );
                     }),
-
+                SizedBox(
+                  height: 30,
+                ),
                 // 4, Use the FooterWidget here
                 FooterWidget(),
               ],

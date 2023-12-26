@@ -22,7 +22,6 @@ class FooterWidget extends StatelessWidget {
       color: Colors.black,
       child: Column(
         children: [
-          SizedBox(height: 40),
           Divider(
             color: Colors.amber,
             thickness: 1,

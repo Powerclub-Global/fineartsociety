@@ -121,7 +121,7 @@ class AllArtistsPage extends StatelessWidget {
                 FutureBuilder(
                     future: readJson(),
                     builder: (context, snapshot) {
-                      return BuildBlockGrid(girdData: snapshot.data!, isRectangular: false,);
+                      return BuildBlockGrid(girdData: snapshot.data!, isRectangular: false,isEvent: false,);
                     }),
 
                 // 4, Use the FooterWidget here

@@ -2,6 +2,7 @@ import 'package:fineartsociety/pages/all_artist_page.dart';
 import 'package:fineartsociety/pages/contact_page.dart';
 import 'package:fineartsociety/pages/events_page.dart';
 import 'package:fineartsociety/pages/exhibitions_page.dart';
+import 'package:fineartsociety/pages/indivisual_page.dart';
 import 'package:fineartsociety/pages/news_page.dart';
 import 'package:flutter/material.dart';
 import 'pages/main_page.dart';
@@ -17,7 +18,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Fine Art Society',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+
+        primarySwatch: Colors.amber,
+        fontFamily: 'Cinzel'
       ),
       initialRoute: '/',
       routes: {
@@ -27,7 +30,8 @@ class MyApp extends StatelessWidget {
         '/allArtist': (context) => AllArtistsPage(),
         '/events': (context) => EventsPage(),
         '/contact': (context) => ContactPage(),
-        '/exhibitions': (context) => ExhibitionPage()
+        '/exhibitions': (context) => ExhibitionPage(),
+        '/indivisualItem':(context) => IndivisualPage()
         // Add more routes as needed
       },
     );

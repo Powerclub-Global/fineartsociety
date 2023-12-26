@@ -216,7 +216,7 @@ class _ArtistPageState extends State<ArtistPage> {
                                 height:
                                     MediaQuery.of(context).size.height * 0.7,
                                 child: Image.asset(
-                       'assets/artist_$artistIndex.png',
+                                  'assets/artist_$artistIndex.png',
                                   fit: BoxFit.cover,
                                   width: double.infinity,
                                 ),
@@ -262,7 +262,7 @@ class _ArtistPageState extends State<ArtistPage> {
                             child: Container(
                               height: MediaQuery.of(context).size.height * 0.7,
                               child: Image.asset(
-                              'assets/artist_$artistIndex.png',
+                                'assets/artist_$artistIndex.png',
                                 fit: BoxFit.cover,
                                 width: double.infinity,
                               ),
@@ -332,6 +332,9 @@ class _ArtistPageState extends State<ArtistPage> {
                   alignment: WrapAlignment.center,
                   children: List.generate(artistArtWork.length, (index) {
                     return InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/indivisualItem');
+                      },
                       child: Container(
                         width: 240,
                         height: 240,
@@ -355,7 +358,7 @@ class _ArtistPageState extends State<ArtistPage> {
                   }),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 60,
                 ),
                 // Use the FooterWidget here
                 FooterWidget(),

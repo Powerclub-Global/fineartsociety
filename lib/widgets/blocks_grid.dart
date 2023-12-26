@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 class BuildBlockGrid extends StatelessWidget {
   final List<dynamic> girdData;
   final bool isRectangular;
+  final bool isEvent;
 
-  BuildBlockGrid({required this.girdData, required this.isRectangular});
+  BuildBlockGrid(
+      {required this.girdData,
+      required this.isRectangular,
+      required this.isEvent});
+
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +27,9 @@ class BuildBlockGrid extends StatelessWidget {
                   !isRectangular
                       ? Navigator.pushNamed(context, '/artist',
                           arguments: {"index": index, "data": girdData[index]})
-                      : null;
+                      : isEvent
+                          ? Navigator.pushNamed(context, '/indivisualItem')
+                          : null;
                 },
                 child: Container(
                   width: isRectangular ? 320 : 240,

@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../widgets/custom_app_bar.dart';
@@ -7,6 +6,8 @@ import '../widgets/blocks_grid.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../widgets/footer_widget.dart';
+
+
 
 class MainPage extends StatelessWidget {
   Future<List<dynamic>> readJson() async {
@@ -121,8 +122,15 @@ class MainPage extends StatelessWidget {
                 FutureBuilder(
                     future: readJson(),
                     builder: (context, snapshot) {
-                      return BuildBlockGrid(girdData: snapshot.data!, isRectangular: false,);
+                      return BuildBlockGrid(
+                        girdData: snapshot.data!,
+                        isRectangular: false,
+                        isEvent: false,
+                      );
                     }),
+                SizedBox(
+                  height: 20,
+                ),
                 // 4, Use the FooterWidget here
                 FooterWidget(),
               ],

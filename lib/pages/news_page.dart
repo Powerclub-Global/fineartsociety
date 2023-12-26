@@ -124,6 +124,7 @@ class NewsPage extends StatelessWidget {
                       return BuildBlockGrid(
                         girdData: snapshot.data!,
                         isRectangular: true,
+                        isEvent: false,
                       );
                     }),
 
