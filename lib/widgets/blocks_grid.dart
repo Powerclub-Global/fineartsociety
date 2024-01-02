@@ -5,11 +5,10 @@ class BuildBlockGrid extends StatelessWidget {
   final bool isRectangular;
   final bool isEvent;
 
-  BuildBlockGrid(
-      {required this.girdData,
+  const BuildBlockGrid(
+      {super.key, required this.girdData,
       required this.isRectangular,
       required this.isEvent});
-
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +47,7 @@ class BuildBlockGrid extends StatelessWidget {
                     child: Text(
                       isRectangular ? '' : girdData[index]['name'],
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 20, color: Colors.white),
+                      style: const TextStyle(fontSize: 20, color: Colors.white),
                     ),
                   ),
                 ),

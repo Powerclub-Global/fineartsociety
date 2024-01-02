@@ -10,6 +10,8 @@ import '../widgets/footer_widget.dart';
 
 
 class MainPage extends StatelessWidget {
+  const MainPage({super.key});
+
   Future<List<dynamic>> readJson() async {
     final String response =
         await rootBundle.loadString('assets/artists_data.json');
@@ -26,11 +28,10 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: CustomAppBar(),
+      appBar: const CustomAppBar(),
       body: LayoutBuilder(
         builder: (context, constraints) {
           double firstFoldHeight = MediaQuery.of(context).size.height * 0.75;
-
           return SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -60,7 +61,7 @@ class MainPage extends StatelessWidget {
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.black,
                             ),
-                            child: Text(
+                            child: const Text(
                               'Enter Virtual Gallery',
                               style: TextStyle(
                                 color: Colors.white,
@@ -72,15 +73,14 @@ class MainPage extends StatelessWidget {
                     ],
                   ),
                 ),
-
                 // 2. Press Carousel
                 Container(
                   color: Colors.black,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SizedBox(height: 20),
-                      Center(
+                      const SizedBox(height: 20),
+                      const Center(
                         child: Text(
                           'FEATURED IN',
                           style: TextStyle(fontSize: 14, color: Colors.white),
@@ -110,14 +110,14 @@ class MainPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
-                Center(
+                const SizedBox(height: 20),
+                const Center(
                   child: Text(
                     'FEATURED ARTISTS',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 // 3. Featured Artists
                 FutureBuilder(
                     future: readJson(),
@@ -128,7 +128,7 @@ class MainPage extends StatelessWidget {
                         isEvent: false,
                       );
                     }),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 // 4, Use the FooterWidget here

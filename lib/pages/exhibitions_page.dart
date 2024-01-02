@@ -1,14 +1,12 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_svg/svg.dart';
 import '../widgets/custom_app_bar.dart';
-import '../widgets/blocks_grid.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:url_launcher/url_launcher.dart';
 import '../widgets/footer_widget.dart';
 
 class ExhibitionPage extends StatelessWidget {
+  const ExhibitionPage({super.key});
+
   Future<List<dynamic>> readJson() async {
     final String response =
         await rootBundle.loadString('assets/artists_data.json');
@@ -25,7 +23,7 @@ class ExhibitionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: CustomAppBar(),
+      appBar: const CustomAppBar(),
       body: LayoutBuilder(
         builder: (context, constraints) {
           double firstFoldHeight = MediaQuery.of(context).size.height * 0.9;
@@ -39,7 +37,7 @@ class ExhibitionPage extends StatelessWidget {
                 SizedBox(
                   height: 0.0490797546 * MediaQuery.sizeOf(context).height,
                 ),
-                Text(
+                const Text(
                   "FAIRS AND EXHIBITIONS",
                   style: TextStyle(color: Colors.white, fontSize: 30),
                 ),
@@ -52,7 +50,7 @@ class ExhibitionPage extends StatelessWidget {
                         children: [
                           TextButton(
                               onPressed: () {},
-                              child: Text(
+                              child: const Text(
                                 "2019",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 20),
@@ -63,7 +61,7 @@ class ExhibitionPage extends StatelessWidget {
                           ),
                           TextButton(
                               onPressed: () {},
-                              child: Text(
+                              child: const Text(
                                 "2020",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 20),
@@ -74,7 +72,7 @@ class ExhibitionPage extends StatelessWidget {
                           ),
                           TextButton(
                               onPressed: () {},
-                              child: Text(
+                              child: const Text(
                                 "2021",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 20),
@@ -85,7 +83,7 @@ class ExhibitionPage extends StatelessWidget {
                           ),
                           TextButton(
                               onPressed: () {},
-                              child: Text(
+                              child: const Text(
                                 "2022",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 20),
@@ -96,7 +94,7 @@ class ExhibitionPage extends StatelessWidget {
                           ),
                           TextButton(
                               onPressed: () {},
-                              child: Text(
+                              child: const Text(
                                 "2023",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 20),
@@ -108,47 +106,47 @@ class ExhibitionPage extends StatelessWidget {
                         children: [
                           TextButton(
                               onPressed: () {},
-                              child: Text(
+                              child: const Text(
                                 "2019",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 20),
                               )),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
                           TextButton(
                               onPressed: () {},
-                              child: Text(
+                              child: const Text(
                                 "2020",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 20),
                               )),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
                           TextButton(
                               onPressed: () {},
-                              child: Text(
+                              child: const Text(
                                 "2021",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 20),
                               )),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
                           TextButton(
                               onPressed: () {},
-                              child: Text(
+                              child: const Text(
                                 "2022",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 20),
                               )),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
                           TextButton(
                               onPressed: () {},
-                              child: Text(
+                              child: const Text(
                                 "2023",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 25),
@@ -181,7 +179,7 @@ class ExhibitionPage extends StatelessWidget {
                   height: 0.0736196319 * MediaQuery.sizeOf(context).height,
                 ),
                 Padding(
-                  padding: EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(20),
                   child: Container(
                     decoration: BoxDecoration(
                         color: Colors.grey,
@@ -190,33 +188,33 @@ class ExhibitionPage extends StatelessWidget {
                     width: 540,
                   ),
                 ),
-                Text(
+                const Text(
                   "Red Dot and Spectrum",
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
-                Text(
+                const Text(
                   "December X - December X 2022",
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
 
-                SizedBox(
+                const SizedBox(
                   height: 100,
                 ),
-                Align(
+                const Align(
                   alignment: Alignment.center,
                   child: Text(
                     "2023",
                     style: TextStyle(color: Colors.white, fontSize: 30),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 Padding(
-                  padding: EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(20),
                   child: isDesktop
                       ? Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -230,18 +228,18 @@ class ExhibitionPage extends StatelessWidget {
                                   height: 340,
                                   width: 500,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 30,
                                 ),
-                                Text(
+                                const Text(
                                   "Red Dot and Spectrum",
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 20),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
-                                Text(
+                                const Text(
                                   "December X - December X 2022",
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 20),
@@ -257,18 +255,18 @@ class ExhibitionPage extends StatelessWidget {
                                   height: 340,
                                   width: 500,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 30,
                                 ),
-                                Text(
+                                const Text(
                                   "Red Dot and Spectrum",
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 20),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
-                                Text(
+                                const Text(
                                   "December X - December X 2022",
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 20),
@@ -288,25 +286,25 @@ class ExhibitionPage extends StatelessWidget {
                                   height: 340,
                                   width: 500,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 30,
                                 ),
-                                Text(
+                                const Text(
                                   "Red Dot and Spectrum",
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 20),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
-                                Text(
+                                const Text(
                                   "December X - December X 2022",
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 20),
                                 )
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 80,
                             ),
                             Column(
@@ -318,18 +316,18 @@ class ExhibitionPage extends StatelessWidget {
                                   height: 340,
                                   width: 500,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 30,
                                 ),
-                                Text(
+                                const Text(
                                   "Red Dot and Spectrum",
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 20),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 5,
                                 ),
-                                Text(
+                                const Text(
                                   "December X - December X 2022",
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 20),

@@ -9,7 +9,7 @@ class ContactPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: CustomAppBar(),
+      appBar: const CustomAppBar(),
       body: LayoutBuilder(
         builder: (context, constraints) {
           bool isDesktop = MediaQuery.of(context).size.width > 1168;
@@ -18,7 +18,7 @@ class ContactPage extends StatelessWidget {
               child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 60),
+                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 60),
                 child: isDesktop
                     ? Row(
                         children: [
@@ -32,7 +32,7 @@ class ContactPage extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.15,
                           ),
-                          Column(
+                          const Column(
                             children: [
                               Text(
                                 "GET IN TOUCH",
@@ -76,31 +76,31 @@ class ContactPage extends StatelessWidget {
                                 color: Colors.grey,
                                 borderRadius: BorderRadius.circular(30)),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 50,
                           ),
-                          Text(
+                          const Text(
                             "GET IN TOUCH",
                             style: TextStyle(color: Colors.white, fontSize: 40),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 60,
                           ),
-                          Text(
+                          const Text(
                             "2301 COLLINS AVE \n MAIMI BEACH, FL",
                             style: TextStyle(color: Colors.white, fontSize: 25),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 40,
                           ),
-                          Text(
+                          const Text(
                             "305-984-7801",
                             style: TextStyle(color: Colors.white, fontSize: 25),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 40,
                           ),
-                          Text(
+                          const Text(
                             "FINEARTSOCIETY@GMAIL.COM",
                             style: TextStyle(color: Colors.white, fontSize: 23),
                           ),

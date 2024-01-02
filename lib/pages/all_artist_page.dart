@@ -19,7 +19,7 @@ class AllArtistsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: CustomAppBar(),
+      appBar: const CustomAppBar(),
       body: LayoutBuilder(
         builder: (context, constraints) {
           double firstFoldHeight = MediaQuery.of(context).size.height * 0.75;
@@ -109,14 +109,14 @@ class AllArtistsPage extends StatelessWidget {
                 //     ],
                 //   ),
                 // ),
-                SizedBox(height: 20),
-                Center(
+                const SizedBox(height: 20),
+                const Center(
                   child: Text(
                     'ALL ARTISTS',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 // 3. Featured Artists
                 FutureBuilder(
                     future: readJson(),

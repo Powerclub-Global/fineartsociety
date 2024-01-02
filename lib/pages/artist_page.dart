@@ -1,9 +1,7 @@
 // lib/pages/artist_page.dart
-import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/services.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 import '../widgets/footer_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -185,7 +183,7 @@ class _ArtistPageState extends State<ArtistPage> {
         ? Scaffold(
             backgroundColor: Colors.black, // Set the background color to black
             appBar: AppBar(
-              title: Text(
+              title: const Text(
                 'Fine Art Society',
                 style: TextStyle(
                   fontSize: 20.0,
@@ -212,7 +210,7 @@ class _ArtistPageState extends State<ArtistPage> {
                             flex: 2,
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(20),
-                              child: Container(
+                              child: SizedBox(
                                 height:
                                     MediaQuery.of(context).size.height * 0.7,
                                 child: Image.asset(
@@ -227,7 +225,7 @@ class _ArtistPageState extends State<ArtistPage> {
                           Expanded(
                             flex: 3,
                             child: Container(
-                              padding: EdgeInsets.all(20),
+                              padding: const EdgeInsets.all(20),
                               color: Colors.black,
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -235,15 +233,15 @@ class _ArtistPageState extends State<ArtistPage> {
                                 children: [
                                   Text(
                                     artistData!['name'],
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontSize: 24,
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold),
                                   ),
-                                  SizedBox(height: 10),
+                                  const SizedBox(height: 10),
                                   Text(
                                     artistData['bio'],
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontSize: 16, color: Colors.white),
                                   ),
                                 ],
@@ -259,7 +257,7 @@ class _ArtistPageState extends State<ArtistPage> {
                           // Artist Image
                           ClipRRect(
                             borderRadius: BorderRadius.circular(20),
-                            child: Container(
+                            child: SizedBox(
                               height: MediaQuery.of(context).size.height * 0.7,
                               child: Image.asset(
                                 'assets/artist_$artistIndex.png',
@@ -270,7 +268,7 @@ class _ArtistPageState extends State<ArtistPage> {
                           ),
                           // Artist Name and Bio
                           Container(
-                            padding: EdgeInsets.all(20),
+                            padding: const EdgeInsets.all(20),
                             color: Colors.black,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -278,15 +276,15 @@ class _ArtistPageState extends State<ArtistPage> {
                               children: [
                                 Text(
                                   artistData!['name'],
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 24,
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold),
                                 ),
-                                SizedBox(height: 10),
+                                const SizedBox(height: 10),
                                 Text(
                                   artistData['bio'],
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 16, color: Colors.white),
                                 ),
                               ],
@@ -297,8 +295,8 @@ class _ArtistPageState extends State<ArtistPage> {
                     }
                   },
                 ),
-                SizedBox(height: 20),
-                Center(
+                const SizedBox(height: 20),
+                const Center(
                   child: Text(
                     'FEATURED IN',
                     style: TextStyle(fontSize: 14, color: Colors.white),
@@ -315,14 +313,14 @@ class _ArtistPageState extends State<ArtistPage> {
                     viewportFraction: 0.2,
                   ),
                 ),
-                SizedBox(height: 20),
-                Center(
+                const SizedBox(height: 20),
+                const Center(
                   child: Text(
                     'AVAILABLE ARTWORKS',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 // Art Works available implemented here
@@ -333,7 +331,7 @@ class _ArtistPageState extends State<ArtistPage> {
                   children: List.generate(artistArtWork.length, (index) {
                     return InkWell(
                       onTap: () {
-                        Navigator.pushNamed(context, '/indivisualItem');
+                        Navigator.pushNamed(context, '/productsPage');
                       },
                       child: Container(
                         width: 240,
@@ -350,14 +348,14 @@ class _ArtistPageState extends State<ArtistPage> {
                           child: Text(
                             artistArtWork[index]['title'],
                             textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            style: const TextStyle(fontSize: 20, color: Colors.white),
                           ),
                         ),
                       ),
                     );
                   }),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 60,
                 ),
                 // Use the FooterWidget here

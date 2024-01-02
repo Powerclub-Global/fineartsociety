@@ -9,7 +9,7 @@ class IndivisualPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: CustomAppBar(),
+      appBar: const CustomAppBar(),
       body: LayoutBuilder(
         builder: (context, constraints) {
           double firstFoldHeight = MediaQuery.of(context).size.height * 0.75;
@@ -19,7 +19,7 @@ class IndivisualPage extends StatelessWidget {
               child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 60),
+                padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 60),
                 child: isDesktop
                     ? Row(
                         children: [
@@ -33,8 +33,8 @@ class IndivisualPage extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.1736,
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 30),
+                          const Padding(
+                            padding: EdgeInsets.only(bottom: 30),
                             child: Column(
                               children: [
                                 Text(
@@ -80,31 +80,31 @@ class IndivisualPage extends StatelessWidget {
                                 color: Colors.grey,
                                 borderRadius: BorderRadius.circular(30)),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 50,
                           ),
-                          Text(
+                          const Text(
                             "TITLE",
                             style: TextStyle(color: Colors.white, fontSize: 40),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 60,
                           ),
-                          Text(
+                          const Text(
                             "DATE/TIME",
                             style: TextStyle(color: Colors.white, fontSize: 25),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 40,
                           ),
-                          Text(
+                          const Text(
                             "LOCATION",
                             style: TextStyle(color: Colors.white, fontSize: 25),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 40,
                           ),
-                          Text(
+                          const Text(
                             "DESCRIPTION",
                             style: TextStyle(color: Colors.white, fontSize: 23),
                           ),

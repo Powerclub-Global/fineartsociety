@@ -4,11 +4,11 @@ import 'package:flutter/services.dart';
 import 'package:timer_count_down/timer_count_down.dart';
 import '../widgets/custom_app_bar.dart';
 import '../widgets/blocks_grid.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:url_launcher/url_launcher.dart';
 import '../widgets/footer_widget.dart';
 
 class EventsPage extends StatelessWidget {
+  const EventsPage({super.key});
+
   Future<List<dynamic>> readJson() async {
     final String response =
         await rootBundle.loadString('assets/artists_data.json');
@@ -20,7 +20,7 @@ class EventsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: CustomAppBar(),
+      appBar: const CustomAppBar(),
       body: LayoutBuilder(
         builder: (context, constraints) {
           double firstFoldHeight = MediaQuery.of(context).size.height * 0.75;
@@ -32,10 +32,10 @@ class EventsPage extends StatelessWidget {
                 // 1. Hero Image
                 Container(
                   height: firstFoldHeight,
-                  decoration: BoxDecoration(color: Colors.grey),
+                  decoration: const BoxDecoration(color: Colors.grey),
                   child: Stack(
                     children: [
-                      Center(
+                      const Center(
                         child: Text(
                           'NEXT EVENT',
                           style: TextStyle(fontSize: 50),
@@ -44,7 +44,7 @@ class EventsPage extends StatelessWidget {
                       Align(
                         alignment: Alignment.bottomCenter,
                         child: Padding(
-                          padding: EdgeInsets.only(bottom: 20),
+                          padding: const EdgeInsets.only(bottom: 20),
                           child: Countdown(
                             seconds: 259000,
                             build: (BuildContext context, double time) {
@@ -54,7 +54,7 @@ class EventsPage extends StatelessWidget {
                               int Minutes = Time.inMinutes - Time.inHours * 60;
 
                               return Container(
-                                padding: EdgeInsets.symmetric(horizontal: 80),
+                                padding: const EdgeInsets.symmetric(horizontal: 80),
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(100),
                                   border: Border.all(
@@ -73,17 +73,17 @@ class EventsPage extends StatelessWidget {
                                         children: [
                                           Text(
                                             Days.toString().length == 1
-                                                ? '0${Days}'
-                                                : '${Days}',
-                                            style: TextStyle(
-                                                color: const Color.fromARGB(
+                                                ? '0$Days'
+                                                : '$Days',
+                                            style: const TextStyle(
+                                                color: Color.fromARGB(
                                                     255, 209, 163, 23),
                                                 fontSize: 50),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 8,
                                           ),
-                                          Text(
+                                          const Text(
                                             'DAYS',
                                             style: TextStyle(
                                               color: Colors.white,
@@ -96,16 +96,16 @@ class EventsPage extends StatelessWidget {
                                             MainAxisAlignment.center,
                                         children: [
                                           Text(
-                                            '${Hours}',
-                                            style: TextStyle(
-                                                color: const Color.fromARGB(
+                                            '$Hours',
+                                            style: const TextStyle(
+                                                color: Color.fromARGB(
                                                     255, 209, 163, 23),
                                                 fontSize: 50),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 8,
                                           ),
-                                          Text(
+                                          const Text(
                                             'HOURS',
                                             style: TextStyle(
                                               color: Colors.white,
@@ -118,16 +118,16 @@ class EventsPage extends StatelessWidget {
                                             MainAxisAlignment.center,
                                         children: [
                                           Text(
-                                            '${Minutes}',
-                                            style: TextStyle(
-                                                color: const Color.fromARGB(
+                                            '$Minutes',
+                                            style: const TextStyle(
+                                                color: Color.fromARGB(
                                                     255, 209, 163, 23),
                                                 fontSize: 50),
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 8,
                                           ),
-                                          Text(
+                                          const Text(
                                             'MINUTES',
                                             style: TextStyle(
                                               color: Colors.white,
@@ -138,7 +138,7 @@ class EventsPage extends StatelessWidget {
                                     ]),
                               );
                             },
-                            interval: Duration(minutes: 1),
+                            interval: const Duration(minutes: 1),
                             onFinished: () {
                               print('Timer is done!');
                             },
@@ -148,7 +148,7 @@ class EventsPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 Stack(
@@ -158,11 +158,11 @@ class EventsPage extends StatelessWidget {
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.black,
-                            side: BorderSide(
+                            side: const BorderSide(
                                 color: Colors.amber,
                                 width: 1,
                                 strokeAlign: BorderSide.strokeAlignOutside)),
-                        child: Padding(
+                        child: const Padding(
                           padding: EdgeInsets.all(20),
                           child: Text(
                             ' REQUEST ACCESS ',
@@ -259,16 +259,16 @@ class EventsPage extends StatelessWidget {
                 //     ],
                 //   ),
                 // ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
-                Center(
+                const Center(
                   child: Text(
                     'PAST EXPERIENCE',
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
 
                 // 3. Featured Artists
                 FutureBuilder(
@@ -280,7 +280,7 @@ class EventsPage extends StatelessWidget {
                         isEvent: true,
                       );
                     }),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 // 4, Use the FooterWidget here
