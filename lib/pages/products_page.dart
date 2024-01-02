@@ -534,19 +534,19 @@ class ProductsPage extends ConsumerWidget {
                                 TextButton(
                                     style: TextButton.styleFrom(
                                         minimumSize: Size(180, 70),
-                                        backgroundColor: Colors.amber,
+                                        backgroundColor: Colors.black,
                                         shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(15),
                                             side: BorderSide(
-                                                color: Colors.white))),
+                                                color: Colors.amber))),
                                     onPressed: () {
                                       Navigator.pushNamed(context, '/contact');
                                     },
                                     child: Text(
                                       "Contact us",
                                       style: TextStyle(
-                                          color: Colors.black, fontSize: 19),
+                                          color: Colors.white, fontSize: 19),
                                     ))
                               ],
                             ),
